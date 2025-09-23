@@ -1,0 +1,127 @@
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif; /* Een standaard leesbaar lettertype */
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh; /* Make body at least the full height of the viewport */
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: #fa0021; /* Lichte achtergrondkleur */
+    color: #aeaeae; /* Donkere tekstkleur */
+    background-image:url("31.60\ Studios\ Logo.png");
+    background-position: center center;
+    background-size: 1840px;
+}
+
+.text-rood {
+    color: #ff0000; /* Rood */
+}
+
+.text-appelblauwzeegroen {
+    color: #00ffff; /* Appelblauwzeegroen (cyaan) */
+}
+
+header {
+    background-color: #000000; /* Donkere achtergrond voor header */
+    color: #fff; /* Witte tekstkleur voor header */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw onder de header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none; /* Geen bolletjes voor de lijst */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline; /* Menu-items naast elkaar */
+    margin-right: 20px;
+}
+
+nav a {
+    color: #fff; /* Witte linkkleur in navigatie */
+    text-decoration: none; /* Geen onderstreping */
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ddd; /* Iets lichtere kleur bij hover */
+}
+
+main {
+    padding: 20px;
+    max-width: 960px; /* Maximale breedte van de hoofdinhoud */
+    min-width: 900px;
+    margin: 20px auto; /* Centreer de hoofdinhoud */
+    background-color: #2e0202; /* Witte achtergrond voor content area */
+    border-radius: 8px; /* Afgeronde hoeken */
+    text-align: center;
+}
+
+#email{
+    width: 250px;
+}
+
+.name{
+    width: 250px;
+}
+
+#message{
+    width: 250px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #a4a4a4;
+    border-bottom: 2px solid #a2a1a1; /* Subtiele lijn onder sectiekoppen */
+    padding-bottom: 10px;
+}
+
+/* Specifieke stijlen voor game items */
+.game-item {
+    background-color: #000000; /* Lichte achtergrond per game */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.game-item h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.game-item img {
+    max-width: 100%; /* Zorgt dat afbeeldingen niet breder zijn dan hun container */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+div {
+    flex-grow: 1;
+}
+
+.center-image {
+    width: 600px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 30px;
+    
+}
