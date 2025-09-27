@@ -1,0 +1,3 @@
+1. fix the sub to email list
+2. fix help page
+3. footer in contact page
