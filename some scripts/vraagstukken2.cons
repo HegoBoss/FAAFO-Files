@@ -1,0 +1,106 @@
+namespace Prb.vraagstukken2.cons
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            int age;
+
+            string dataInput;
+            string dataInputII;
+            string[] dataParts;
+            string[] dataPartsII;
+
+            string activiteit;
+            int day, month, year;
+            int hour, minute;
+
+            day = 0;
+            month = 0;
+            year = 0;
+            hour = 0;
+            minute = 0;
+
+
+            bool isDataValid = false;
+            bool isDataValidII = false;
+
+            while (!isDataValid){
+                Console.WriteLine("wat is de datum van de activiteit?");
+                dataInput = Console.ReadLine();
+
+                dataParts = dataInput.Split("/");
+                if (dataParts.GetLength(0) == 3)
+                {
+                    bool isDayValid = int.TryParse(dataParts[0], out day);
+                    bool isMonthValid = int.TryParse(dataParts[1], out month);
+                    bool isYearValid = int.TryParse(dataParts[2], out year);
+                    if (isDayValid && isMonthValid && isYearValid)
+                    {
+                        if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 1900 && year <= DateTime.Now.Year)
+                        {
+                            isDataValid = true;
+                            Console.WriteLine($"Check");
+                        }
+                        else
+                        {
+                            Console.WriteLine("De dag, maand of jaar is buiten het geldige bereik. Probeer het opnieuw.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Een of meer delen van de datum zijn geen geldige getallen. Probeer het opnieuw.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Ongeldig formaat. Gebruik het formaat DD/MM/YYYY. Probeer het opnieuw.");
+                }
+            }
+
+
+            while (!isDataValidII)
+            {
+                Console.WriteLine("Wat is de tijdstip?");
+                dataInputII = Console.ReadLine();
+
+                dataPartsII = dataInputII.Split(":");
+                if (dataPartsII.GetLength(0) == 2)
+                {
+                    
+                    bool isHourValid = int.TryParse(dataPartsII[0], out hour);
+                    bool isMinuteValid = int.TryParse(dataPartsII[1], out minute);
+                    if (isHourValid && isMinuteValid)
+                    {
+                        if (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
+                        {
+                            isDataValidII = true;
+                            Console.WriteLine($"check");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Het uur of de minuut is buiten het geldige bereik. Probeer het opnieuw.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Een of meer delen van de tijd zijn geen geldige getallen. Probeer het opnieuw.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Ongeldig formaat. Gebruik het formaat HH:MM. Probeer het opnieuw.");
+                }
+            }
+
+            Console.WriteLine("leg je activiteit uit");
+            activiteit = Console.ReadLine();
+
+            Console.WriteLine($"check");
+
+            Console.WriteLine($"Je hebt op {day}-{month}-{year} om {hour}:{minute} gepland:{activiteit}");
+
+        }
+    }
+}
