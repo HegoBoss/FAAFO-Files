@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/headstyle.css">
+    <link rel="icon" href="images/logo/favicon (2).ico">
+    <title>Rio's Bakkery</title>
+</head>
+
+<body>
+    <header>
+        <h1><img src="images/logo/Riosbackerylogo.png" alt="Logowebsite" class="logo"></h1>
+        <h1>Rio's Bakery</h1>
+        <h2>If you have any questions, feel free to contact us!</h2>
+
+        <nav>   
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="Contact.html" class="active">Contact</a></li>
+                <li><a href="bread.html">Breads</a></li>
+                <li><a href="pastries.html">Pastries</a></li>
+                <li><a href="cakes.html">Cakes</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form method="post" action="https://jkorpela.fi/cgi-bin/echo.cgi" id="contactform" name="contactform">
+            <fieldset>
+                <h3>Contact form</h3>
+                <h3>Contact info</h3>
+                <div class="contact">
+                    <div>
+                        <label for="txtFirstName">*First name</label>
+                        <input type="text" name="FirstName" id="txtFirstName" required />
+                    </div>
+                    <div>
+                        <label for="txtLastName">*Family name</label>
+                        <input type="text" name="LastName" id="txtLastName" required />
+                    </div>
+                    <div>
+                        <label for="txtStreet">*Street name</label>
+                        <input type="text" name="Street" id="txtStreet" required />
+                    </div>
+                    <div>
+                        <label for="txtAdressNumber">*Bus number</label>
+                        <input type="number" name="AdressNumber" id="txtAdressNumber" required />
+                    </div>
+                    <div>
+                        <label for="txtPostalCode">*PostalCode</label>
+                        <input type="number" name="PostalCode" id="txtPostalCode" required />
+                    </div>
+                    <div>
+                        <label for="txtMail">*E-mail</label>
+                        <input type="email" name="Mail" id="txtMail" required />
+                    </div>
+                    <div>
+                        <label for="txtTel">*Phone number</label>
+                        <input type="tel" name="Tel" id="Tel" required />
+                    </div>
+                </div>
+                <h3>Reason for contact</h3>
+                <div class="reden">
+                    <div>
+                        <label for="chkProblemProduct">Problem with a product</label>
+                        <input type="checkbox" name="ProblemProduct" id="chkProblemProduct" />
+                    </div>
+                    <div>
+                        <label for="chkQuestionProduct">Questions about products</label>
+                        <input type="checkbox" name="QuestionProduct" id="chkQuestionProduct" />
+                    </div>
+                    <div>
+                        <label for="chkReturnPolicy">Questions about warranty and returns</label>
+                        <input type="checkbox" name="ReturnPolicy" id="chkReturnPolicy" />
+                    </div>
+                    <div>
+                        <label for="chkCommision">Questions about custom orders</label>
+                        <input type="checkbox" name="Commision" id="chkReturnPolicy" />
+                    </div>
+                    <div>
+                        <label for="chkLearningHowToThrow">Questions about courses to learn how to make bread</label>
+                        <input type="checkbox" name="LearningHowToThrow" id="chkLearningHowToThrow" />
+                    </div>
+                </div>
+                <h3>Are you already a customer or not?</h3>
+                <div class="klant">
+                    <div>
+                        <input id="rdb" name="Ja" type="radio" value="Ja" />
+                        <label for="rdbJa">Yes</label>
+                    </div>
+                    <div>
+                        <input id="rdb" name="Nee" type="radio" value="Nee" />
+                        <label for="rdbNee">No</label>
+                    </div>
+                </div>
+                <h3>message</h3>
+                <div class="message">
+                    <div>
+                        <textarea id="message" name="tekst" rows="25" placeholder="Type here your message" required></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Send message" />
+                        <input type="reset" value="Reset" />
+                    </div>
+                </div>
+            </fieldset>
+
+        </form>
+
+
+
+
+
+        <div class="chatknop">
+            <input type="button" value="Chat" />
+        </div>
+    </main>
+
+    <footer>
+        <small>Dit is een virtuele oefenfirma. Informatie, transacties en goederen op deze website zijn fictief en hebben louter educatieve doeleinden</small>
+        <p>© Rionaldo De Clerck – WFB@Home – Howest</p>
+    </footer>
+
+</body>
+</html>
