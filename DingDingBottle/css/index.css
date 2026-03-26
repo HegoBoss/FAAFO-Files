@@ -1,0 +1,48 @@
+/* Algemene instellingen */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    
+    /* --- NIEUW: De Gradient Achtergrond --- */
+    background: linear-gradient(135deg, #29554c 0%, #7284d1 100%);
+    
+    /* Zorgt dat de achtergrond altijd het hele scherm vult */
+    min-height: 100vh; 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Zet alles netjes in het midden */
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+#uitleg {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* De Startknop */
+.start-knop {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.start-knop:hover {
+    background-color: #2980b9;
+}
+

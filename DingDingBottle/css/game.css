@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    
+    /* --- NIEUW: Het CSS Stippenpatroon --- */
+    background-color: #f8f9fa; /* Een heel lichte, zachtgrijze basiskleur */
+    background-image: radial-gradient(#ced4da 2px, transparent 2px);
+    background-size: 30px 30px; /* Bepaalt de afstand tussen de stippen */
+    
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.terug-knop {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #95a5a6; /* Neutrale grijze kleur */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.terug-knop:hover {
+    background-color: #7f8c8d;
+    color: #fff;
+}
+
+/* Grid layout voor 30 vakjes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 kolommen */
+    gap: 15px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Standaard uiterlijk van een vakje */
+.tile {
+    aspect-ratio: 1 / 1; /* Maakt vakjes perfect vierkant */
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+/* --- SPECIFIEKE OPDRACHT STIJLEN --- */
+
+/* Ding: Geel met blauwe rand */
+.ding {
+    background-color: yellow !important;
+    border: 3px solid blue !important;
+}
+
+/* Bottle: Oranje met blauwe rand */
+.bottle {
+    background-color: orange !important;
+    border: 3px solid blue !important;
+}
+
+/* DingDingBottle: Groen met blauwe rand */
+.dingdingbottle {
+    background-color: green !important;
+    border: 3px solid blue !important;
+    color: white; /* Voor leesbaarheid op groen */
+}
+
+/* Nummer: Licht-rood met rode rand */
+.nummer {
+    background-color: #ffcccb !important;
+    border: 3px solid red !important;
+}
+
+/* Zorgt dat aangeklikte vakjes niet meer reageren */
+.disabled {
+    pointer-events: none;
+}
+
+/* Reset knop styling */
+button {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.vuurwerk-deeltje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    animation: ontplof 1s ease-out forwards;
+}
+
+@keyframes ontplof {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(0);
+        opacity: 0;
+    }
+}
