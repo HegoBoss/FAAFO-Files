@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Color Studio 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Color Studio</h1>
+        
+        <div class="main-display">
+            <input type="color" id="colorPicker" value="#6366f1">
+            <div class="info">
+                <h2 id="colorNameDisplay">Indigo Modern</h2>
+                <code id="hexText">#6366F1</code>
+            </div>
+            <button onclick="copyToClipboard()" id="copyBtn">Kopieer HEX</button>
+        </div>
+
+        <div class="library-header">
+            <h3>Bibliotheek</h3>
+            <span id="copyStatus">Gekopieerd!</span>
+        </div>
+
+        <div id="colorLibrary" class="scroll-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #3e3f41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgb(0, 0, 0);
+    width: 400px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.main-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+input[type="color"] {
+    width: 70px; height: 70px;
+    border: none; border-radius: 12px;
+    cursor: pointer; background: none;
+}
+
+.info h2 { margin: 0; font-size: 1.1rem; color: #ffffff; }
+.info code { color: #ffffff; font-size: 1rem; }
+
+#copyBtn {
+    margin-left: auto;
+    background: #1e293b; color: white;
+    border: none; padding: 8px 12px;
+    border-radius: 8px; cursor: pointer;
+}
+
+.library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.scroll-box {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+    border: 1px solid #f1f5f9;
+    border-radius: 10px;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f8fafc;
+    transition: background 0.2s;
+}
+
+.color-item:hover { background: #000000; }
+
+.swatch {
+    width: 35px; height: 35px;
+    border-radius: 6px;
+    margin-right: 12px;
+}
+
+.name-label { font-size: 0.9rem; font-weight: 500; color: #ffffff; }
+.hex-label { font-size: 0.8rem; color: #ffffff; margin-left: auto; font-family: monospace; }
+
+#copyStatus { color: #10b981; font-size: 0.8rem; display: none; }
